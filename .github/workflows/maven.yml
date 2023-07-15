@@ -58,7 +58,5 @@ jobs:
           port: ${{ secrets.PORT }}
           # ssh进入系统后执行什么样的操作。一般是关闭原有的服务在重启
           script: |
-            cd /home
-            # nohup  /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /java/springboot-cicd-1.0-SNAPSHOT.jar > nohup.out &
             nohup  /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /java/springboot-cicd-1.0-SNAPSHOT.jar > runtime.log 2>&1 &
             pwd
