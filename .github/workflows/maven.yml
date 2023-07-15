@@ -38,7 +38,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           # Github Action 的服务器文件路径
-          local: target/cicd-0.0.1-SNAPSHOT.jar
+          local: /target/cicd-0.0.1-SNAPSHOT.jar
           # 私有服务器文件路径
           remote: /java/cicd-0.0.1-SNAPSHOT.jar
           # 私有服务器公网IP地址
