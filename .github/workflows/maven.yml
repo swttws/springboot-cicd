@@ -59,7 +59,7 @@ jobs:
           # ssh进入系统后执行什么样的操作。一般是关闭原有的服务在重启
           script: |
             cd /home
-            ps -ef | grep  demo-0.0.1-SNAPSHOT.jar | grep -v grep | awk '{print $2}' | xargs kill -9
+            ps aux | grep 'demo-0.0.1-SNAPSHOT.jar' | grep -v grep | awk '{print $2}' | xargs kill -9
             # nohup  /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /java/springboot-cicd-1.0-SNAPSHOT.jar > nohup.out &
             nohup  /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /java/springboot-cicd-1.0-SNAPSHOT.jar > runtime.log 2>&1 &
             pwd
